@@ -25,6 +25,16 @@ class App extends Component {
         <h2>Gift Giver</h2>
         <h3>Birthday List</h3>
 
+        <div className="gift-list">
+          {
+            this.state.gifts.map((gift, index) => {
+              return (
+                <div key={index}>{gift.id}</div>
+              )
+            })
+          }
+        </div>
+
         <Button className="button-add" onClick={this.addGift}>
           Add Gift
         </Button>
